@@ -1,4 +1,4 @@
-package com.dio.personapi.domain.entity;
+package com.dio.personapi.domain.entities;
 
 import com.dio.personapi.enums.PhoneType;
 import lombok.AllArgsConstructor;
