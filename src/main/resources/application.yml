@@ -1,0 +1,6 @@
+spring:
+  profile:
+    active: dev
+
+  application:
+    name: "Person API"
