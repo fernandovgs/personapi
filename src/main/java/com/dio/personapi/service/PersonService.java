@@ -1,5 +1,6 @@
 package com.dio.personapi.service;
 
+import com.dio.personapi.domain.entities.Person;
 import com.dio.personapi.exceptions.PersonNotFoundException;
 import com.dio.personapi.domain.dtos.PersonDTO;
 import com.dio.personapi.domain.mappers.PersonMapper;
@@ -34,9 +35,18 @@ public class PersonService {
     }
 
     public PersonDTO findPersonById(Long id) throws PersonNotFoundException {
-        var foundPerson = personRepository.findById(id)
-                .orElseThrow(() -> new PersonNotFoundException(id));
+        var foundPerson = verifyIfExists(id);
 
         return personMapper.toDTO(foundPerson);
+    }
+
+    public void deletePersonById(Long id) throws PersonNotFoundException {
+        verifyIfExists(id);
+        personRepository.deleteById(id);
+    }
+
+    public Person verifyIfExists(Long id) throws PersonNotFoundException {
+        return personRepository.findById(id)
+                .orElseThrow(() -> new PersonNotFoundException(id));
     }
 }
