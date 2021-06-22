@@ -5,7 +5,14 @@ import com.dio.personapi.domain.dtos.ResponseMessageDTO;
 import com.dio.personapi.service.PersonService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/people")
@@ -16,8 +23,8 @@ public class PersonController {
 
     // testing purposes
     @GetMapping
-    public String getBook() {
-        return "API Test!";
+    public List<PersonDTO> getBook() {
+        return personService.findAllPersons();
     }
 
     @PostMapping
