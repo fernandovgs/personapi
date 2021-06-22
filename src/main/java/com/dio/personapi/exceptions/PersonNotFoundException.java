@@ -1,4 +1,4 @@
-package com.dio.personapi;
+package com.dio.personapi.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class PersonNotFoundException extends Exception {
 
     public PersonNotFoundException(Long id) {
-        super(String.format("Beer with id %d not found.", id));
+        super(String.format("Person with id %d not found.", id));
     }
 }
