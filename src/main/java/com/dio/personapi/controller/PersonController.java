@@ -1,16 +1,13 @@
 package com.dio.personapi.controller;
 
+import com.dio.personapi.PersonNotFoundException;
 import com.dio.personapi.domain.dtos.PersonDTO;
 import com.dio.personapi.domain.dtos.ResponseMessageDTO;
 import com.dio.personapi.service.PersonService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,8 +20,13 @@ public class PersonController {
 
     // testing purposes
     @GetMapping
-    public List<PersonDTO> getBook() {
+    public List<PersonDTO> getPerson() {
         return personService.findAllPersons();
+    }
+
+    @GetMapping("/{id}")
+    public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
+        return personService.findPersonById(id);
     }
 
     @PostMapping
