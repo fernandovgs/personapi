@@ -2,6 +2,7 @@ package com.dio.personapi.domain.entities;
 
 import com.dio.personapi.enums.PhoneType;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,6 +18,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 public class Phone {
 
     @Id
