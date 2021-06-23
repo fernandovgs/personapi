@@ -1,13 +1,10 @@
 package com.dio.personapi.utils;
 
 import com.dio.personapi.domain.dtos.PersonDTO;
-import com.dio.personapi.domain.dtos.PhoneDTO;
 import com.dio.personapi.domain.entities.Person;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Collections;
-import java.util.List;
 
 public class PersonUtils {
 
