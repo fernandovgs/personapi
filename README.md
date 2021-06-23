@@ -2,13 +2,16 @@
 
 Practice project developed during [GFT START #2 Bootcamp](https://digitalinnovation.one/bootcamps/gft-start-2-java),
 offered by Digital Innovation One.
+
 ---
+
 ## Introduction
 
 This project handles a simple CRUD for basic info about people, like first name, last name, phones, CPF (Brazilian
 acronym for "Cadastro de Pessoas Físicas" or "Physical Person Registration") and birthdate. The goal is to study the
 main concepts of REST Architecture, and, by that, creating a RESTful API. Also, the course teaches how to simply deploy
 in the cloud platform [Heroku](https://www.heroku.com/).
+
 ---
 ## REST and RESTful
 
@@ -27,7 +30,9 @@ should not store client's contexts and each request must have all the informatio
 - Layered system: dividing a system into different layers makes the system more flexible to changes.
 
 A RESTful service is simply a service that implements REST Architecture!
---
+
+---
+
 ## Tools and Methods used
 
 1. **Spring Boot**: [Spring project](https://spring.io/projects/spring-boot) that makes significantly easier to start
